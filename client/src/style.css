@@ -1067,15 +1067,15 @@ pre {
   --tw-prose-invert-bold: #fff;
   --tw-prose-invert-counters: #9ca3af;
   --tw-prose-invert-bullets: #4b5563;
-  --tw-prose-invert-hr: #424242;
+  --tw-prose-invert-hr: #1c2541;
   --tw-prose-invert-quotes: #f3f4f6;
-  --tw-prose-invert-quote-borders: #424242;
+  --tw-prose-invert-quote-borders: #1c2541;
   --tw-prose-invert-captions: #9ca3af;
   --tw-prose-invert-code: #fff;
   --tw-prose-invert-pre-code: #d1d5db;
   --tw-prose-invert-pre-bg: rgba(0, 0, 0, 0.5);
-  --tw-prose-invert-th-borders: #4b5563;
-  --tw-prose-invert-td-borders: #424242;
+  --tw-prose-invert-th-borders: #3b4a6e;
+  --tw-prose-invert-td-borders: #1c2541;
   font-size: 1rem;
   line-height: 1.4;
 }
@@ -1564,7 +1564,7 @@ html {
 .dark body,
 .dark html {
   --tw-bg-opacity: 1;
-  background-color: rgba(23, 23, 23, var(--tw-bg-opacity));
+  background-color: rgba(10, 10, 10, var(--tw-bg-opacity));
 }
 
 #__next,
@@ -2222,7 +2222,7 @@ html {
 .dark .webkit-dark-styles:focus {
   -webkit-text-fill-color: #fff;
   background-clip: content-box;
-  -webkit-box-shadow: 0 0 0 50vh #0d0d0d inset;
+  -webkit-box-shadow: 0 0 0 50vh #0a0a0a inset;
 }
 
 /* Ordered Listing */
@@ -2975,4 +2975,115 @@ html {
 
 .sharepoint-picker-bg {
   background-color: #f5f5f5;
+}
+
+/* ===================================
+   Organization-specific style overrides
+   Keep at the END of file to win cascade
+   =================================== */
+
+/* Dark theme: gray scale → navy/dark-blue tones */
+.dark {
+  --gray-20:  #d8dce8;
+  --gray-50:  #c4c9da;
+  --gray-100: #a8afc6;
+  --gray-200: #8b94b2;
+  --gray-300: #6e7a9e;
+  --gray-400: #536189;
+  --gray-500: #3b4a6e;
+  --gray-600: #1c2541;
+  --gray-700: #141a32;
+  --gray-800: #0e1225;
+  --gray-850: #0c0f1a;
+  --gray-900: #0a0a0a;
+
+  /* HSL-based design tokens → navy tones */
+  --background: 228 67% 6%;        /* #0e1225 → was 0 0% 7% */
+  --foreground: 220 20% 95%;       /* soft white with blue tint */
+  --card: 228 80% 4%;              /* #0a0a14 → was 0 0% 3.9% */
+  --card-foreground: 220 20% 95%;
+  --primary: 220 20% 95%;
+  --primary-foreground: 228 50% 10%;
+  --secondary: 226 45% 12%;        /* ~#141a32 → was 0 0% 14.9% */
+  --secondary-foreground: 220 20% 95%;
+  --muted: 226 45% 12%;            /* ~#141a32 */
+  --muted-foreground: 224 20% 55%;
+  --accent: 226 45% 12%;
+  --accent-foreground: 220 20% 95%;
+  --border: 226 30% 16%;           /* ~#1c2541 */
+  --input: 226 30% 16%;
+  --ring: 220 30% 60%;
+  --switch-unchecked: 224 20% 30%;
+}
+
+/* Auth Layout - shared (light & dark) */
+.auth-layout-bg button[type="submit"] {
+  background-color: #2563eb !important;
+  color: #fff !important;
+}
+
+.auth-layout-bg button[type="submit"]:hover {
+  background-color: #1d4ed8 !important;
+}
+
+.auth-layout-bg a {
+  color: #2563eb !important;
+}
+
+.auth-layout-bg a:hover {
+  color: #1d4ed8 !important;
+}
+
+/* Auth Layout - light mode */
+.auth-layout-bg {
+  background: #ffffff;
+}
+
+/* Auth Layout - dark mode */
+.dark .auth-layout-bg {
+  background: linear-gradient(rgb(10, 10, 10) 0%, rgb(12, 22, 50) 50%, rgb(14, 25, 50) 100%);
+}
+
+.dark .auth-layout-bg input {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+}
+
+.dark .auth-layout-bg input:focus {
+  border-color: rgba(59, 130, 246, 0.6) !important;
+}
+
+.dark .auth-layout-bg label {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.dark .auth-layout-bg button[type="submit"] {
+  background-color: #2563eb !important;
+  color: #fff !important;
+}
+
+.dark .auth-layout-bg button[type="submit"]:hover {
+  background-color: #1d4ed8 !important;
+}
+
+.dark .auth-layout-bg a {
+  color: #60a5fa !important;
+}
+
+.dark .auth-layout-bg a:hover {
+  color: #93bbfd !important;
+}
+
+.dark .auth-layout-bg p,
+.dark .auth-layout-bg span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Root containers & page background */
+.dark html,
+.dark body,
+.dark #__next,
+.dark #root {
+  background-color: #0a0a0a;
 }

@@ -1,0 +1,51 @@
+/* ===================================
+   Organization-specific style overrides
+   =================================== */
+
+/* ---- Auth Layout ---- */
+
+/* Background gradient */
+.auth-layout-bg {
+  background: linear-gradient(rgb(10, 10, 10) 0%, rgb(12, 22, 50) 50%, rgb(14, 25, 50) 100%);
+}
+
+/* Form inputs */
+.auth-layout-bg input {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+}
+
+.auth-layout-bg input:focus {
+  border-color: rgba(59, 130, 246, 0.6) !important;
+}
+
+/* Floating labels */
+.auth-layout-bg label {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Submit button */
+.auth-layout-bg button[type="submit"] {
+  background-color: #2563eb !important;
+  color: #fff !important;
+}
+
+.auth-layout-bg button[type="submit"]:hover {
+  background-color: #1d4ed8 !important;
+}
+
+/* Links (signup, forgot password) */
+.auth-layout-bg a {
+  color: #60a5fa !important;
+}
+
+.auth-layout-bg a:hover {
+  color: #93bbfd !important;
+}
+
+/* Misc text */
+.auth-layout-bg p,
+.auth-layout-bg span {
+  color: rgba(255, 255, 255, 0.7);
+}
